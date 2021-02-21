@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="398.0" prefWidth="800.0" style="-fx-background-color: orange;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="democrud1.MainController">
+   <children>
+      <VBox layoutX="12.0" layoutY="26.0" prefHeight="191.0" prefWidth="105.0" spacing="15.0">
+         <children>
+            <Label text="ID:">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label text="Full Name:">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label text="Address:">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label text="Contact Number">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label text="Quantity">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+      <VBox layoutX="115.0" layoutY="26.0" prefHeight="191.0" prefWidth="168.0" spacing="10.0">
+         <children>
+            <TextField fx:id="tfId" />
+            <TextField fx:id="tfTitle" />
+            <TextField fx:id="tfAuthor" />
+            <TextField fx:id="tfYear" />
+            <TextField fx:id="tfPages" />
+         </children>
+      </VBox>
+      <TableView fx:id="tvBooks" layoutX="286.0" layoutY="26.0" onMouseClicked="#handleButtonAction" prefHeight="298.0" prefWidth="502.0">
+        <columns>
+          <TableColumn fx:id="colId" prefWidth="47.0" text="ID" />
+          <TableColumn fx:id="colTitle" prefWidth="124.0" text="Full Name" />
+            <TableColumn fx:id="colAuthor" prefWidth="125.0" text="Address" />
+            <TableColumn fx:id="colYear" prefWidth="134.0" text="Contact Number" />
+            <TableColumn fx:id="colPages" prefWidth="71.0" text="Quantity" />
+        </columns>
+      </TableView>
+      <Button fx:id="btnInsert" layoutX="64.0" layoutY="242.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="25.0" prefWidth="63.0" text="Insert" />
+      <Button fx:id="btnUpdate" layoutX="136.0" layoutY="242.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="25.0" prefWidth="63.0" text="Update" />
+      <Button fx:id="btnDelete" layoutX="208.0" layoutY="242.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="25.0" prefWidth="63.0" text="Delete" />
+   </children>
+</AnchorPane>
